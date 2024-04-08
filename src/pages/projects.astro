@@ -16,6 +16,52 @@ import Footer from "../components/Footer.astro";
 	<body>
 		<Header />
 
+        <section id="project-page">
+            <p id="heading">
+                Below are some of the projects i'm working on or have worked on, more on my <a href="https://github.com/thelocalgodd" target="_blank">GitHub.</a>
+            </p>
+
+            <div id="project-text-boxes">
+            <TextBox 
+					heading="thelocalgodd.me 2.0"
+					content=`
+						I'm redesigning and rebuilding my
+						personal portfolio from scratch, taking
+						inspiration from a couple of websites
+						I have seen.
+					`
+				/>
+				<TextBox 
+					heading="tailwind-auto-script"
+					content=`
+					this is a basic bash script I wrote
+					to automate the process of creating 
+					a new react project with vite, 
+					adding tailwind to it, and configuring
+					it to work.
+					`
+				/>
+				<TextBox 
+					heading="basic calculator app"
+					content=`
+						exactly what the name suggests, 
+						it is a basic calculator app with 
+						super basic functionalities, I 
+						made it just for practice sake.
+					`
+				/>
+            </div>
+
+            <p id="more-projects">
+                check out more projects 
+                <a href="https://github.com/thelocalgodd">
+                    <b>
+                        here
+                    </b>
+                </a>
+            </p>
+
+        </section>
 		<Footer />
 	</body>
 </html>

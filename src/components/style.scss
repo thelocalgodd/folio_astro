@@ -274,3 +274,17 @@ Blog Post Styling
         }
     }
 }
+
+/*
+Project Page Styling
+*/
+
+section#project-page {
+    margin: 0 20px;
+
+    #project-text-boxes {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+}

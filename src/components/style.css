@@ -223,4 +223,16 @@ Blog Post Styling
   padding: 0 5px;
 }
 
+/*
+Project Page Styling
+*/
+section#project-page {
+  margin: 0 20px;
+}
+section#project-page #project-text-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
 /*# sourceMappingURL=style.css.map */
