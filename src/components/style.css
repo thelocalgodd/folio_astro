@@ -54,36 +54,39 @@ header #navigation ul li {
   margin: 5px 10px;
 }
 
-section#welcome {
+#homepage {
+  margin: 0 10px;
+}
+#homepage section#welcome {
   display: flex;
   align-items: center;
   margin: 0 10px;
 }
-section#welcome #text-box-intro {
+#homepage section#welcome #text-box-intro {
   border: 1px solid black;
   margin: 20px 10px 50px;
   padding: 20px;
   width: 60%;
   border-radius: 20px;
 }
-section#welcome #text-box-intro #heading {
+#homepage section#welcome #text-box-intro #heading {
   color: grey;
 }
-section#welcome #image-box {
+#homepage section#welcome #image-box {
   display: flex;
 }
-section#welcome #image-box #container {
+#homepage section#welcome #image-box #container {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-section#welcome #image-box #container img {
+#homepage section#welcome #image-box #container img {
   width: 40%;
   border: 1px solid black;
   margin: 10px;
   border-radius: 20px;
 }
-section#welcome #image-box #container button {
+#homepage section#welcome #image-box #container button {
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -91,35 +94,45 @@ section#welcome #image-box #container button {
   padding: 3px 10px;
   border-radius: 10px;
 }
-
-section#tech-used {
+#homepage section#welcome #image-box #container button:hover {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(214, 214, 214);
+  font-weight: bold;
+}
+#homepage section#tech-used {
   border: 1px solid black;
   margin: 0 20px;
   padding: 20px;
   border-radius: 20px;
 }
-section#tech-used #heading {
+#homepage section#tech-used #heading {
   color: grey;
 }
-section#tech-used #container {
+#homepage section#tech-used #container {
   justify-content: space-between;
   align-items: center;
 }
-
-section#featured {
-  padding: 50px 20px;
+#homepage section#featured {
+  padding: 50px 10px;
 }
-section#featured #featured {
-  margin: 10px 0;
+#homepage section#featured #featured {
+  margin: 10px 15px;
 }
-section#featured #container {
+#homepage section#featured #container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+#homepage section#featured #container #text-box {
+  margin: 0 10px;
+}
+#homepage section#featured #container #text-box:hover {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(214, 214, 214);
+}
 
 hr {
-  border: 1px solid black;
+  border: 1px solid rgb(185, 185, 185);
   margin: 20px 0 0px 0;
 }
 
@@ -192,7 +205,7 @@ section#about-textboxes #text-box:nth-child(2) {
 Blog Page Styling
 */
 section#blog-posts {
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 section#blog-posts #blog-posts {
   border: 1px solid black;
@@ -227,12 +240,19 @@ Blog Post Styling
 Project Page Styling
 */
 section#project-page {
-  margin: 0 20px;
+  margin: 30px 20px;
 }
 section#project-page #project-text-boxes {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 30px 0;
+}
+section#project-page #project-text-boxes #text-box:hover {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(214, 214, 214);
+}
+section#project-page #more-projects {
+  margin: 0 -20px;
 }
 
 /*
@@ -256,6 +276,70 @@ section#project-page #project-text-boxes {
   margin: 10px 20px;
   background-color: rgb(214, 214, 214);
   border-radius: 20px;
+}
+
+@media screen and (min-width: 370px) and (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+  }
+  header #container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+  header #container nav {
+    margin: 30px 0 0 0;
+  }
+  header #navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header #navigation ul {
+    display: flex;
+    list-style: none;
+  }
+  header #navigation ul li {
+    margin: 5px 10px;
+  }
+  /* Homepage Styling */
+  section#welcome {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section#welcome #text-box-intro {
+    font-size: 25px;
+  }
+  section#welcome #image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#welcome #image-box #container {
+    display: flex;
+    flex-direction: column;
+  }
+  section#welcome #image-box #container button {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  section#tech-used #container {
+    font-size: 25px;
+  }
+  section#featured #featured {
+    margin: 10px 0;
+  }
+  section#featured #container {
+    display: flex;
+    flex-direction: column;
+  }
+  section#featured #container #text-box {
+    margin: 10px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
