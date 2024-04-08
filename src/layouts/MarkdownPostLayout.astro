@@ -1,0 +1,22 @@
+---
+const { frontmatter } = Astro.props;
+import Header from "../components/Header.astro";
+import '../components/style.css'
+import Footer from "../components/Footer.astro";
+---
+
+<Header />
+
+<div id="blog-post-head">
+    <p id="front-matter-title">{frontmatter.title}</p>
+    <p id="front-matter-author">{frontmatter.author}</p>
+</div>
+
+<div id="blog-post-content">
+    <p>{frontmatter.date}</p>
+    <p>description: <span>{frontmatter.description}</span></p>
+    <br><br>
+    <slot />
+</div>
+
+<Footer />

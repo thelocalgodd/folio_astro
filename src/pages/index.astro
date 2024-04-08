@@ -1,16 +1,99 @@
 ---
-
+import Header from "../components/Header.astro";
+import '../components/style.css'
+import TextBox from "../components/TextBox.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>[TLG]</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+		<section id="welcome">
+			<div id="text-box-intro">
+				<p id="heading">Welcome,</p>
+				<br>
+				<p id="content">
+					my name is Vincent Kwaku Kpemlie,
+					currently a CS Major at KNUST, Kumasi.
+					<br><br>
+					aspiring to be a Cybersecurity Professional,
+					I am currently learning the basics of Cybersecurity
+					<br>
+				</p>
+			</div>
+
+			<div id="image-box">
+				<div id="container">
+					<img src="../../public/avatar.png" alt="">
+
+					<button>
+						<a href="../../public/resume.pdf">
+							📃resume
+						</a>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="tech-used">
+			<div id="container">
+				<p id="heading">Tools / Technologies I Use</p>
+				<br>
+				<p id="content">
+					HTML, CSS, Sass, Javascript, ReactJS, Astro, NodeJS, Bash, Python, Java, C++, Git, Github, Photoshop, Figma, Linux
+				</p>
+			</div>
+		</section>
+
+		<section id="featured">
+			<p id="featured">featured</p>
+			<div id="container">
+				<TextBox 
+					heading="thelocalgodd.me 2.0"
+					content=`
+						I'm redesigning and rebuilding my
+						personal portfolio from scratch, taking
+						inspiration from a couple of websites
+						I have seen.
+					`
+				/>
+				<TextBox 
+					heading="tailwind-auto-script"
+					content=`
+					this is a basic bash script I wrote
+					to automate the process of creating 
+					a new react project with vite, 
+					adding tailwind to it, and configuring
+					it to work.
+					`
+				/>
+				<TextBox 
+					heading="basic calculator app"
+					content=`
+						exactly what the name suggests, 
+						it is a basic calculator app with 
+						super basic functionalities, I 
+						made it just for practice sake.
+					`
+				/>
+			</div>
+		</section>
+
+		<p id="more-projects">
+			check out more projects 
+			<a href="https://github.com/thelocalgodd">
+				<b>
+					here
+				</b>
+			</a>
+		</p>
+		<Footer />
 	</body>
 </html>

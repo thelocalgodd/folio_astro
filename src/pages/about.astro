@@ -1,0 +1,69 @@
+---
+import Header from "../components/Header.astro";
+import '../components/style.css'
+import TextBox from "../components/TextBox.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>[TLG]</title>
+	</head>
+	<body>
+		<Header />
+        
+        <section id="pretext">
+            <p id="pretext">
+                Here are a few words about me, 
+                and my past, I may or may not 
+                have more in my blog.
+            </p>
+        </section>
+
+        <section id="about-textboxes">
+            <TextBox 
+                heading = `Something small...`
+                content=`
+                I was born and bred in 
+                a small town in Ghana, 
+                West Africa. I am highly
+                motivated to do great things.
+                
+                I love memes and anime, and of
+                course, I love to learn new
+                and interesting things.`
+            />
+
+            <TextBox 
+                heading = `how my journey started...`
+                content=`
+                here is a little something about me, 
+                I started coding getting to the end 
+                of semester one in 2023, I had just 
+                started a four year course in 
+                Computer Science, I was expecting to
+                 pursue Electrical Engineering, 
+                 but it did not work out (now I 
+                 believe it was probably for the 
+                 best).
+                 \n
+                 I was taking Introduction to Structured 
+                 Programming in first sem and had to learn
+                 C++ the following sem, so I took it upon 
+                 myself to get a head start,  I hopped on 
+                 to w3schools and learned the basics of c++ 
+                 and it was a walkover in the end.
+                 \n
+                 anyway, a few months later, here I am. 
+                 Glory to God for all the great things he 
+                 has done. 🧑‍🍳` 
+            />
+        </section>
+
+		<Footer />
+	</body>
+</html>

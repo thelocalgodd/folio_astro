@@ -1,0 +1,14 @@
+---
+const { postTitle, postDate, postName } = Astro.props;
+
+import '../components/style.css'
+---
+
+<div id="blog-post">
+    <div id="container">
+        <a href=`posts/${postName}`>
+            <p id="post-title">{postTitle}</p>
+            <p id="post-date">{postDate}</p>
+        </a>
+    </div>
+</div>
