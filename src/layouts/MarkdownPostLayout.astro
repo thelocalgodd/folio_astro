@@ -3,20 +3,32 @@ const { frontmatter } = Astro.props;
 import Header from "../components/Header.astro";
 import '../styles/style.css'
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
-<Header />
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>[TLG]</title>
+		<ViewTransitions />
+	</head>
+        <body>
+            <Header />
+            <div id="blog-post-head">
+                <p id="front-matter-title">{frontmatter.title}</p>
+                <p id="front-matter-author">{frontmatter.author}</p>
+            </div>
 
-<div id="blog-post-head">
-    <p id="front-matter-title">{frontmatter.title}</p>
-    <p id="front-matter-author">{frontmatter.author}</p>
-</div>
+            <div id="blog-post-content">
+                <p>{frontmatter.date}</p>
+                <p>description: <span>{frontmatter.description}</span></p>
+                <br><br>
+                <slot />
+            </div>
 
-<div id="blog-post-content">
-    <p>{frontmatter.date}</p>
-    <p>description: <span>{frontmatter.description}</span></p>
-    <br><br>
-    <slot />
-</div>
-
-<Footer />
+            <Footer />
+        </body>
+</html>

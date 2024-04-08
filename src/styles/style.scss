@@ -62,6 +62,11 @@ header {
 
             li {
                 margin: 5px 10px;
+
+                .active {
+                    color: rgb(255, 196, 0);
+                    font-weight: 600;
+                }
             }
         }
     }

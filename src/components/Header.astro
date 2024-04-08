@@ -1,15 +1,18 @@
 ---
 import '../styles/style.css'
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <header>
     <div id="container">
         <p id="logo">[tlg]</p>
-
         <nav>
             <ul>
                 <li>
-                    <a href="mailto:splashvincentk@outlook.com">
+                    <a 
+                    href="mailto:splashvincentk@outlook.com">
                         📧
                     </a>
                 </li>
@@ -31,16 +34,24 @@ import '../styles/style.css'
         <nav>
             <ul>
                 <li>
-                    <a href="/">home</a>
+                    <a
+                    class={currentPath === "" ? "active" : ""} 
+                    href="/">home</a>
                 </li>
                 <li>
-                    <a href="/about">about</a>
+                    <a
+                    class={currentPath === "about" ? "active" : ""} 
+                    href="/about">about</a>
                 </li>
                 <li>
-                    <a href="/projects">projects</a>
+                    <a
+                    class={currentPath === "projects" ? "active" : ""} 
+                    href="/projects">projects</a>
                 </li>
                 <li>
-                    <a href="/blog">blog</a>
+                    <a
+                    class={currentPath === "blog" ? "active" : ""} 
+                    href="/blog">blog</a>
                 </li>
             </ul>
         </nav>

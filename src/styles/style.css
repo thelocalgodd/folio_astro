@@ -53,6 +53,10 @@ header #navigation ul {
 header #navigation ul li {
   margin: 5px 10px;
 }
+header #navigation ul li .active {
+  color: rgb(255, 196, 0);
+  font-weight: 600;
+}
 
 #homepage {
   margin: 0 10px;
