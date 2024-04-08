@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://thelocalgodd.github.io/folio_astro',
+    site: 'https://thelocalgodd.me/folio_astro',
 });
